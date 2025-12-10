@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Shiwakoti | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HERO + NAVIGATION -->
+    <header id="hero">
+        <video autoplay muted loop id="video-bg">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+
+        <nav class="navbar">
+            <div class="logo">Aditya</div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menu-button">☰</button>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Aditya Shiwakoti</h1>
+            <p>Student • Developer • Tech Enthusiast</p>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am Aditya Shiwakoti, a second-year student at Herald College Kathmandu. Passionate about development, design, and building real-world projects.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>React</span>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+
+        <div id="projects-grid">
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>Uses OpenWeather API to fetch and display weather data.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Banking System</h3>
+                <p>Console-based banking system that manages transactions and accounts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="form-msg"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Aditya Shiwakoti — All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

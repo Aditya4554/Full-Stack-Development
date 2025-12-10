@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        input {
+            margin: 5px;
+            padding: 8px;
+            width: 200px;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .movie-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .movie-item button {
+            margin-right: 10px;
+        }
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Collection Manager</h1>
+    
+    <form id="add-movie-form">
+        <h3>Add New Movie</h3>
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="genre" placeholder="Genre">
+        <input type="number" id="year" placeholder="Release Year" required>
+        <button type="submit">Add Movie</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Movie List</h2>
+    <input type="text" id="search-input" placeholder="Search movies by title or genre">
+    
+    <div id="movie-list"></div>
+    
+    <script src="movie-script.js"></script>
+</body>
+</html>
