@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-body,
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.page-title,
+h2 {
+  color: darkslategray;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-title,
+h3 {
+  color: darkslategray;
+  margin-bottom: 15px;
+}
+
+/* Navigation Menu */
+.navigation {
+  background-color: darkslategray;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.navigation a {
+  color: white;
+  padding: 8px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.nav-welcome {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-username {
+  color: white;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Table Styling */
+.table,
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid lightgray;
+}
+
+.table-header,
+th {
+  background-color: darkslategray;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-cell,
+td {
+  padding: 12px;
+  border-bottom: 1px solid lightgray;
+}
+
+.table-row:hover,
+tr:hover {
+  background-color: ghostwhite;
+}
+
+/* Form Styling */
+.form,
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.form-search,
+form[method="get"] {
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  margin: 20px 0;
+}
+
+.form-search input,
+form[method="get"] input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.form-search button,
+form[method="get"] button {
+  padding: 10px 20px;
+  width: auto;
+}
+
+.label,
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: darkslategray;
+  font-weight: bold;
+}
+
+.input-field,
+.select-field,
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.input-field:focus,
+.select-field:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border-color: darkslategray;
+  background-color: ghostwhite;
+}
+
+.hidden-input,
+input[type="hidden"] {
+  display: none;
+}
+
+/* Button Styling */
+.btn,
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: darkslategray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn:hover,
+button:hover {
+  background-color: dimgray;
+}
+
+.btn:active,
+button:active {
+  background-color: black;
+}
+
+/* Links Styling */
+.link,
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+.link:hover,
+a:hover {
+  text-decoration: underline;
+}
+
+.text,
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.alert-error,
+p[style*="color:red"] {
+  color: indianred;
+  background-color: mistyrose;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid lightpink;
+  margin: 15px 0;
+}
+
+.alert-success,
+p[style*="color:green"] {
+  color: mediumseagreen;
+  background-color: honeydew;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid palegreen;
+  margin: 15px 0;
+}
+
+/* Action Links in Table */
+.table-link,
+td a {
+  color: steelblue;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.table-link:hover,
+td a:hover {
+  text-decoration: underline;
+}
+
+.table-form,
+td form {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+}
+
+.table-btn,
+td button {
+  width: auto;
+  padding: 6px 12px;
+  margin: 0;
+  background: none;
+  color: steelblue;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.table-btn:hover,
+td button:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+/* Horizontal Rule */
+.divider,
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid lightgray;
+}
+
+/* Search Result */
+.result-container,
+.result-display,
+div[id="result"] {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  display: none;
+  border: 1px solid lightgray;
+}
+
+.result-container:not(:empty),
+.result-display:not(:empty),
+div[id="result"]:not(:empty) {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-body,
+  body {
+    padding: 10px;
+  }
+
+  .form,
+  form {
+    max-width: 100%;
+  }
+
+  .form-search,
+  form[method="get"] {
+    flex-direction: column;
+  }
+
+  .form-search button,
+  form[method="get"] button {
+    width: 100%;
+  }
+
+  .table,
+  table {
+    font-size: 14px;
+  }
+
+  .table-header,
+  .table-cell,
+  th,
+  td {
+    padding: 8px;
+  }
+}
