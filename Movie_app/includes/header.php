@@ -26,4 +26,4 @@ if (session_status() == PHP_SESSION_NONE) {
 <div id="result"></div>
 
 <hr>
-<script src="/Movie_app/assets/search.js"></script>
+<script src="../assets/search.js"></script>

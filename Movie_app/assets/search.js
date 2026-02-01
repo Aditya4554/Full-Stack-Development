@@ -3,7 +3,7 @@ function liveSearch(value) {
     document.getElementById("result").innerHTML = "";
     return;
   }
-  fetch("ajax_search.php?q=" + encodeURIComponent(value))
+  fetch("../public/ajax_search.php?q=" + encodeURIComponent(value))
     .then((res) => res.text())
     .then((data) => (document.getElementById("result").innerHTML = data))
     .catch((err) => console.error(err));

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message = "Password must be at least 6 characters and contain at least one number.";
         } else {
             $password_hash = password_hash($password, PASSWORD_BCRYPT);
-            $stmt = $conn->prepare("INSERT INTO users(username, password) VALUES (?, ?)");
+            $stmt = $conn->prepare("INSERT INTO users(username, password, role) VALUES (?, ?, 'user')");
             if ($stmt) {
                 $stmt->bind_param("ss", $username, $password_hash);
                 try {

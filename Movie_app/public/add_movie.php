@@ -6,6 +6,11 @@ if (!isset($_SESSION['user'])) {
     redirect("login.php");
 }
 
+// Check if user is admin
+if (!is_admin()) {
+    redirect("index.php");
+}
+
 include "../includes/header.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -42,4 +42,28 @@ function validate_input($data, $min_length = 3, $max_length = 50) {
 
 function set_security_headers() {
 }
+
+function is_admin() {
+    if (!isset($_SESSION['user_id'])) {
+        return false;
+    }
+    global $conn;
+    $user_id = $_SESSION['user_id'];
+    $stmt = $conn->prepare("SELECT role FROM users WHERE id = ?");
+    if ($stmt) {
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_assoc();
+        $stmt->close();
+        return $user && isset($user['role']) && $user['role'] === 'admin';
+    }
+    return false;
+}
+
+function require_admin() {
+    if (!is_admin()) {
+        redirect("index.php");
+    }
+}
 ?>
